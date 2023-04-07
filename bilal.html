@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bilal Monthly</title>
+
+    <link rel="stylesheet" href="https://osmankha.github.io/support/genral.css">
+    <link rel="stylesheet" href="https://osmankha.github.io/support/header-bilal.css">
+    <link rel="stylesheet" href="https://osmankha.github.io/support/sidebar-bilal.css">
+    <link rel="stylesheet" href="https://osmankha.github.io/support/main-bilal.css">
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div id="bilal-logo">
+        <a class="official-page" href="https://bilalmasjideastham.co.uk/" target="_blank">
+          <img class="bilal-logo" src="https://osmankha.github.io/support/images/bilal-logo.png">
+        </a>
+      </div>
+      <div class="page-title">
+        <p class="title-p">
+          Bilal Monthly
+        </p>
+      </div>
+      
+    </header>
+    <nav id="nav">   
+      <div id="sidebar" class="sidebar">
+        <button id="close-button" class="close-button" onclick="closeSidebar()">
+              &times;</button>
+        <div class="content-title">
+          <p class="side-title">Monthly Content<p>
+
+        </div>
+        <div class="monthly-content">
+          <!--
+            Input dox under in this format: 
+          <div class="content">
+            <a class="a" href="FILE LOCATION" target="open-here">
+              <button class="content-button">
+                TOPIC - MONTH/20XX =>
+              </button></a></div>
+            -->
+          <div class="content">
+            <a class="a" href="https://www.bing.com" target="open-here">
+              <button class="content-button">
+                z &rArr;
+              </button></a></div>
+          <div class="content">
+              <a class="a" href="https://www.bing.com" target="open-here">
+                <button class="content-button">
+                  Month/20XX &rArr;
+                </button></a>
+          </div>
+        </div>
+        <footer>
+          <div class="address">
+            <div style="font-size: 18px;">
+              Event Venu:
+            </div>
+            <div>
+              Masjid Bilal,
+            </div>
+            <div>
+              295-97 Barking Road,
+            </div>
+            <div>
+              East Ham, London,
+            </div>
+            <div>
+              E6 1LB   
+            </div>
+          </div>
+        </footer>
+      </div>
+      </nav>
+    <main class="main">
+      <div class="iframe-div">
+        <iframe class="iframe" name="open-here" src="https://osmankha.github.io/support/images/bilalmasjid.jpg"></iframe>
+      </div>
+      
+    </main>
+
+    <script>
+      const nav = document.getElementById('nav');
+      const sidebar = document.getElementById('sidebar');
+      const bilaLogo = document.getElementById('bilal-logo');
+      
+      const menu = document.createElement('button');
+      menu.innerText = '=';
+      menu.style = 'position: fixed; top: 10px; left: 10px; font-size: 25px; width: 25px; z-index:111;s hieght: 25px; padding: 0px; margin: 0px';
+      menu.id = 'menubar';
+      menu.onclick = openSidebar;
+      
+      function closeSidebar() {
+        nav.removeChild(sidebar);
+        header.removeChild(bilaLogo);
+        menubar()
+      }
+      function menubar() {
+        document.body.appendChild(menu);
+      }
+
+      function openSidebar(){
+        nav.appendChild(sidebar);
+        header.appendChild(bilaLogo);
+        
+        document.body.removeChild(menu)
+      }
+
+    </script>
+
+  </body>
+</html>
