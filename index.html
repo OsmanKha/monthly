@@ -24,8 +24,7 @@
     </header>
     <nav id="nav">   
       <div id="sidebar" class="sidebar">
-        <button id="close-button" class="close-button" onclick="closeSidebar()">
-              &times;</button>
+        <button id="close-button" class="close-button" onclick="closeSidebar()"><</button>
         <div class="content-title">
           <p class="side-title">Monthly Content<p>
 
@@ -90,8 +89,8 @@
       const bilaLogo = document.getElementById('bilal-logo');
       
       const menu = document.createElement('button');
-      menu.innerText = '=';
-      menu.style = 'position: fixed; top: 10px; left: 10px; font-size: 25px; width: 25px; z-index:111;s hieght: 25px; padding: 0px; margin: 0px';
+      menu.innerText = '>';
+        menu.style = 'position: fixed; top: 95px; left: 0px; font-size: 25px; width: 25px; z-index:111;s hieght: 0px; margin: 0px; color: antiquewhite; background-color: rgb(230, 0, 0); border-width: 0.5px';
       menu.id = 'menubar';
       menu.onclick = openSidebar;
       
